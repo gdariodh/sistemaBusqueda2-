@@ -24,7 +24,7 @@ namespace SistemaBusqueda2.Pages
             }
 
             //obtener el registro de la bd
-            var repo = new RolRepositorio();
+            var repo = new PaisRepositorio();
             var rol = repo.ObtenerRolPorId(id);
             this.Id = rol.Id ;
             this.Nombre = rol.Nombre;
@@ -34,7 +34,7 @@ namespace SistemaBusqueda2.Pages
         public ActionResult OnPost()
         {
             //eliminar el registro de la bd
-            var repo = new RolRepositorio();
+            var repo = new PaisRepositorio();
             repo.EliminarRol(this.Id);
             return RedirectToPage("./Roles");
         }

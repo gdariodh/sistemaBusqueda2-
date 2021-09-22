@@ -25,7 +25,7 @@ namespace SistemaBusqueda2.Pages
                 return RedirectToPage("./Index");
             }
             //ir a buscar a la bd el registro por su id
-            var repo = new RolRepositorio();
+            var repo = new PaisRepositorio();
             var rol = repo.ObtenerRolPorId(id);
             this.Id = rol.Id;
             this.Nombre = rol.Nombre;
@@ -38,7 +38,7 @@ namespace SistemaBusqueda2.Pages
             if (ModelState.IsValid)
             {
                 // actualizar el registro en la bd
-                var repo = new RolRepositorio();
+                var repo = new PaisRepositorio();
                 repo.ActualizarRol(this.Id, this.Nombre);
                 return RedirectToPage("./Roles");
 
