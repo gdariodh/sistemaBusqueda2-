@@ -36,7 +36,7 @@ namespace SistemaBusqueda2.Pages
             //eliminar el registro de la bd
             var repo = new PaisRepositorio();
             repo.EliminarRol(this.Id);
-            return RedirectToPage("./Roles");
+            return RedirectToPage("./Paises");
         }
 
     }

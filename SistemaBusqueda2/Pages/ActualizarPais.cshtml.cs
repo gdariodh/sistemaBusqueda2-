@@ -40,7 +40,7 @@ namespace SistemaBusqueda2.Pages
                 // actualizar el registro en la bd
                 var repo = new PaisRepositorio();
                 repo.ActualizarRol(this.Id, this.Nombre);
-                return RedirectToPage("./Roles");
+                return RedirectToPage("./Paises");
 
             }
 
