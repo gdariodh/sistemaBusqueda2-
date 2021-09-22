@@ -2,7 +2,7 @@
 @model SistemaBusqueda2.Pages.ActualizarPaisModel
 @{
 }
-<h3>Actualizar Rol</h3>
+<h3>Actualizar Pais</h3>
 <hr />
 <div class="card">
     <div class="card-body">
@@ -12,7 +12,7 @@
                 <input asp-for="Nombre" class="form-control" type="text" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
-            <a asp-page="Roles" class="btn btn-secondary">Cancelar</a>
+            <a asp-page="Paises" class="btn btn-secondary">Cancelar</a>
             <button type="submit" class="btn btn-primary">Guardar</button>
             <div asp-validation-summary="All" class="text-danger mt-4"></div>
         </form>
