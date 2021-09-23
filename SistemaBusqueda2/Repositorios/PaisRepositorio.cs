@@ -74,7 +74,7 @@ namespace SistemaBusqueda2.Repositorios
         {
             string connectionString = "server=localhost;database=sistemaBusqueda2;Integrated Security = true;";
             using SqlConnection sql = new SqlConnection(connectionString);
-            using SqlCommand cmd = new SqlCommand("sp_actualizar_rol", sql);
+            using SqlCommand cmd = new SqlCommand("sp_actualizar_pais", sql);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@id", id));
             cmd.Parameters.Add(new SqlParameter("@nombre", nombre));
