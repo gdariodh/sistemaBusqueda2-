@@ -25,20 +25,20 @@
                     <th>
                     </th>
                 </tr>
-            </thead>
+            </thead> 
             <tbody>
-                @foreach (var rol in Model.Paises)
+                @foreach (var pais in Model.Paises)
                 {
                     <tr>
                         <td>
-                            @rol.Id
+                            @pais.Id
                         </td>
                         <td>
-                            @rol.Nombre
+                            @pais.Nombre
                         </td>
                         <td>
-                            <a asp-page="ActualizarPais" asp-route-id="@rol.Id" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Editar rol"><i class="bi bi-pencil-square"></i></a>
-                            <a asp-page="EliminarPais" asp-route-id="@rol.Id" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar rol"><i class="bi bi-trash"></i></a>
+                            <a asp-page="ActualizarPais" asp-route-id="@pais.Id" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Editar pais"><i class="bi bi-pencil-square"></i></a>
+                            <a asp-page="EliminarPais" asp-route-id="@pais.Id" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar pais"><i class="bi bi-trash"></i></a>
                         </td>
                     </tr>
                 }
