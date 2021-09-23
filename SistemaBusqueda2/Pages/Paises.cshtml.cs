@@ -12,7 +12,7 @@ namespace SistemaBusqueda2.Pages
 {
     public class PaisesModel : PageModel
     {
-        public List<RolListaModelo> Roles { get; set; }
+        public List<PaisListaModelo> Paises { get; set; }
         public ActionResult OnGet()
         {
             var idSession = HttpContext.Session.GetString("idSession");
@@ -21,11 +21,11 @@ namespace SistemaBusqueda2.Pages
                 return RedirectToPage("./Index");
             }
 
-            //obtener los registros de la bd y cargarselos a la propiedad Roles
+            //obtener los registros de la bd y cargarselos a la propiedad Paises
 
-            var repo = new RolRepositorio();
+            var repo = new PaisRepositorio();
 
-            this.Roles = repo.ObtenerRoles();
+            this.Paises = repo.ObtenerRoles();
 
             return Page();
         }

@@ -21,13 +21,14 @@ namespace SistemaBusqueda2.Repositorios
             {
                 while (reader.Read())
                 {
-                    var nuevoRol = new PaisListaModelo()
+                    var nuevoPais = new PaisListaModelo()
                     {
                         Id = (int)reader["id"],
                         Nombre = reader["nombre"].ToString(),
+
                     };
 
-                    respuesta.Add(nuevoRol);
+                    respuesta.Add(nuevoPais);
                 }
             }
             return respuesta;
