@@ -31,7 +31,7 @@ namespace SistemaBusqueda2.Pages
             if (ModelState.IsValid)
             {
                 //Guardar el registro en la bd
-                var repo = new RolRepositorio();
+                var repo = new PaisRepositorio();
                 repo.InsertarRol(this.Nombre);
                 return RedirectToPage("./Paises");
             }
