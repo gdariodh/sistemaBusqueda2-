@@ -9,19 +9,19 @@ namespace SistemaBusqueda2.Repositorios
 {
     public class PaisRepositorio
     {
-        public List<RolListaModelo> ObtenerRoles()
+        public List<PaisListaModelo> ObtenerRoles()
         {
-            var respuesta = new List<RolListaModelo>();
+            var respuesta = new List<PaisListaModelo>();
             string connectionString = "server=localhost;database=sistemaBusqueda2;Integrated Security = true;";
             using SqlConnection sql = new SqlConnection(connectionString);
-            using SqlCommand cmd = new SqlCommand("sp_mostrar_roles", sql);
+            using SqlCommand cmd = new SqlCommand("sp_mostrar_paises", sql);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             sql.Open();
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    var nuevoRol = new RolListaModelo()
+                    var nuevoRol = new PaisListaModelo()
                     {
                         Id = (int)reader["id"],
                         Nombre = reader["nombre"].ToString(),
