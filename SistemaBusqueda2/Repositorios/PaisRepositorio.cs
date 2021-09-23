@@ -50,7 +50,7 @@ namespace SistemaBusqueda2.Repositorios
             var respuesta = new RolListaModelo();
             string connectionString = "server=localhost;database=sistemaBusqueda2;Integrated Security = true;";
             using SqlConnection sql = new SqlConnection(connectionString);
-            using SqlCommand cmd = new SqlCommand("sp_obtiene_rol_por_id", sql);
+            using SqlCommand cmd = new SqlCommand("sp_obtiene_pais_por_id", sql);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@id", id));
             sql.Open();
